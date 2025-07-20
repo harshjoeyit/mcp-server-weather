@@ -1,3 +1,6 @@
+## MCP server prototype
+A quick prototype based on - [https://modelcontextprotocol.io/quickstart/server](https://modelcontextprotocol.io/quickstart/server)
+
 
 ## MCP server Logs
 
