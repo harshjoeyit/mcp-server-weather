@@ -89,6 +89,15 @@ Forecast: {period['detailedForecast']}
 
     return "\n---\n".join(forecasts)
 
+# Think of prompts as the server saying: "here are the recommended ways to talk to me."
+@mcp.prompt()
+def daily_briefing(state: str) -> str:
+    return f"Get weather alerts and a 5-period forecast for {state}, then summarise in 3 bullet points."
+
+
 if __name__ == "__main__":
-    # Initialize and run the server
+    # Initialize and run the server and connect through claude desktop
     mcp.run(transport='stdio')
+
+    # for SSE based uncomment and run test_weather.py
+    # mcp.run(transport='sse')
